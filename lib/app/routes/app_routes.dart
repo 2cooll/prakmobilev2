@@ -21,4 +21,5 @@ abstract class Routes {
 
   // ➕ TAMBAHAN
   static const STORAGE_DEMO = '/storage_demo';
+   static const LOCATION = '/location';
 }

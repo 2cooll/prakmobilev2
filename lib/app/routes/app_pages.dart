@@ -1,3 +1,4 @@
+import 'package:geocoding/geocoding.dart';
 import 'package:get/get.dart';
 
 import '../data/paket.dart';
@@ -33,6 +34,8 @@ import '../modules/edit_profile/views/edit_profile_view.dart';
 // ➕ Tambahan storage demo
 import '../modules/storage_demo/bindings/storage_demo_binding.dart';
 import '../modules/storage_demo/views/storage_demo_view.dart';
+import '../modules/location/bindings/location_binding.dart';
+import '../modules/location/views/location_view.dart';
 
 part 'app_routes.dart';
 
@@ -110,6 +113,11 @@ class AppPages {
   name: Routes.STORAGE_DEMO,
   page: () => const StorageDemoView(),
   binding: StorageDemoBinding(),
+),
+GetPage(
+  name: Routes.LOCATION,
+  page: () => LocationView(),
+  binding: LocationBinding(),
 ),
   ];
 }

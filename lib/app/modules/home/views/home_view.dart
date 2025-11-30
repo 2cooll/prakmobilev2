@@ -134,36 +134,47 @@ Center(
     );
   }
 
-  Widget _buildIconRow() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: [
-        Expanded(
-          child: _buildIconContainer(
-            Icons.roofing,
-            "Mini Property",
-            () => Get.toNamed(Routes.MINI_PAGE),
-          ),
+Widget _buildIconRow() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    children: [
+      Expanded(
+        child: _buildIconContainer(
+          Icons.roofing,
+          "Mini Property",
+          () => Get.toNamed(Routes.MINI_PAGE),
         ),
-        const SizedBox(width: 13),
-        Expanded(
-          child: _buildIconContainer(
-            Icons.home,
-            "Medium Property",
-            () => Get.toNamed(Routes.MEDIUM_PAGE),
-          ),
+      ),
+      const SizedBox(width: 13),
+      Expanded(
+        child: _buildIconContainer(
+          Icons.home,
+          "Medium Property",
+          () => Get.toNamed(Routes.MEDIUM_PAGE),
         ),
-        const SizedBox(width: 13),
-        Expanded(
-          child: _buildIconContainer(
-            Icons.house,
-            "Large Property",
-            () => Get.toNamed(Routes.LARGE_PAGE),
-          ),
+      ),
+      const SizedBox(width: 13),
+      Expanded(
+        child: _buildIconContainer(
+          Icons.house,
+          "Large Property",
+          () => Get.toNamed(Routes.LARGE_PAGE),
         ),
-      ],
-    );
-  }
+      ),
+      const SizedBox(width: 13),
+
+      // 🔵 TOMBOL BARU UNTUK LOCATION PAGE
+      Expanded(
+        child: _buildIconContainer(
+          Icons.location_on,
+          "Tracker",
+          () => Get.toNamed(Routes.LOCATION),
+        ),
+      ),
+    ],
+  );
+}
+
 
   Widget _buildIconContainer(IconData icon, String label, VoidCallback onTap) {
     return GestureDetector(
